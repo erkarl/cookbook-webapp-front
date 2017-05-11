@@ -1,0 +1,82 @@
+/*
+VARIABLES
+*/
+
+// colors
+$primary-color: #4BB29C;
+$secondary-color: #FFB53C;
+$accent-color: #F15265;
+$text-dark: #4A4A4A;
+$text-light: #FAFAFA;
+$text-placeholder: #9B9B9B;
+$background-light: #FFF;
+
+// fonts
+$main-font: helvetica;
+
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: $background-light;
+  color: $text-dark;
+  font-family: $main-font;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  width: 100%;
+  top: 257px;
+}
+
+
+.button {
+  padding: 7px 15px;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: $accent-color;
+  border-radius: 10px;
+  color: $text-light;
+  border: 1px solid $text-light;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  width: 100%;
+  height: 350px;
+  background-color: $primary-color;
+  background-image: url(../images/IMG_8591.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: hard-light;
+
+
+  .button {
+    align-self: flex-end;
+    margin: 20px 20px;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+  }
+
+}
+
+.yolo {
+  height: 2000px;
+}
