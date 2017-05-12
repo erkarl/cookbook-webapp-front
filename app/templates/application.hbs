@@ -1,9 +1,16 @@
 <header>
-  {{#link-to 'application' class="button"}}
+  {{#link-to 'login' class="button"}}
   Log In
   {{/link-to}}
-  <h1>MyCookBook</h1>
+  <h1 id="brand">MyCookBook</h1>
 </header>
 
-<div class="yolo">
+<div class="body">
+  {{outlet}}
 </div>
+
+<!--
+<footer>
+  <p>MyCookBook 2017</p>
+</footer>
+-->

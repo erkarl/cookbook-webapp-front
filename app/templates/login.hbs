@@ -1,0 +1,13 @@
+<div class="login body-content">
+  <p>Log in to your account</p>
+  <div class="login-signup-form">
+    {{input type="email" placeholder="Enter you email"}}
+    {{input type="password" placeholder="Enter your password"}}
+    {{#link-to 'dashboard' class="button"}}
+    Log In
+    {{/link-to}}
+  </div>
+  <p>Or {{#link-to 'signup'}}create an account{{/link-to}}. It's easy and free.</p>
+</div>
+
+{{content-photo}}

@@ -35,9 +35,6 @@ h1 {
   margin: 0;
   padding: 20px 0 20px;
   background-color: rgba(255, 255, 255, 0.8);
-  position: relative;
-  width: 100%;
-  top: 257px;
 }
 
 
@@ -49,34 +46,180 @@ h1 {
   border-radius: 10px;
   color: $text-light;
   border: 1px solid $text-light;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.button-grey {
+  background-color: $text-light;
+  color: $text-dark;
+  border-color: $text-dark;
+}
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: $accent-color;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 200;
 }
 
 header {
   width: 100%;
-  height: 350px;
-  background-color: $primary-color;
+  height: 400px;
+  background-color: $secondary-color;
   background-image: url(../images/IMG_8591.jpg);
   background-attachment: fixed;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-blend-mode: hard-light;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .button {
     align-self: flex-end;
     margin: 20px 20px;
-    position: fixed;
-    right: 0;
-    z-index: 1;
   }
 
 }
 
-.yolo {
-  height: 2000px;
+footer {
+  background-color: darken($secondary-color, 20%);
+  width: 100%;
+
+  p {
+    margin: 0;
+    padding: 25px 20px;
+    color: $text-light;
+    font-weight: 200;
+  }
+}
+
+.body {
+  width: 100%;
+}
+
+.body-content {
+  margin: 50px;
+}
+
+.content-photo {
+  width: 100%;
+  height: 400px;
+  background-color: $primary-color;
+  background-image: url(../images/IMG_8591.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: hard-light;
+}
+
+.welcome {
+
+}
+
+.getting-started {
+
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  li {
+    margin: 20px;
+  }
+}
+
+.login, .signup {
+  color: $text-placeholder;
+  text-align: center;
+
+}
+
+.login-signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+
+  input {
+    margin: 7px;
+    border: none;
+    border-bottom: 1px solid $text-dark;
+    font-size: 12px;
+    font-weight: 200;
+    padding-bottom: 5px;
+    min-width: 200px;
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+}
+
+.search {
+  h2 {
+    color: darken($secondary-color, 20%);
+  }
+  input {
+    color: $text-placeholder;
+    border-radius: 10px;
+    border: 1px solid $text-placeholder;
+    font-size: 12px;
+    font-weight: 200;
+    padding: 7px;
+    min-width: 200px;
+  }
+}
+
+.dashboard-1 {
+  .button-grey {
+    float: right;
+  }
+
+}
+
+.dashboard-2 {
+
+}
+
+
+.add-recipe {
+  a {
+    display: block;
+  }
+  div {
+    margin: 20px 0;
+  }
+}
+
+.recipe-header {
+  h2 {
+    margin: 0;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+
+.recipe-content {
+  div {
+    margin: 20px 0;
+  }
 }

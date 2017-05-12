@@ -1,0 +1,13 @@
+<div class="signup body-content">
+  <p>New user? Create your account here.</p>
+  <div class="login-signup-form">
+    {{input type="email" placeholder="Enter you email"}}
+    {{input type="password" placeholder="Choose a password"}}
+    {{#link-to 'dashboard' class="button"}}
+    Create an Account
+    {{/link-to}}
+  </div>
+  <p>Already have an account? {{#link-to 'login'}}Log in here{{/link-to}}.</p>
+</div>
+
+{{content-photo}}

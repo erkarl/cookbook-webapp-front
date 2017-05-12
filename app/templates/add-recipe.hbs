@@ -1,0 +1,37 @@
+<div class= "add-recipe body-content">
+  {{#link-to 'dashboard'}}
+  Back to dashboard
+  {{/link-to}}
+  <div class= "recipe-header">
+    {{input placeholder="Add title"}}
+    {{#link-to 'recipe-view' class="button button-grey"}}
+    Save
+    {{/link-to}}
+  </div>
+  <div class="recipe-content">
+    <div class="ingredients-input">
+      <h3>Ingredients</h3>
+      {{textarea placeholder="Enter ingredients"}}
+    </div>
+    <div class="image-input">
+      <a>Add an image</a>
+    </div>
+    <div class="labels-input">
+      {{input placeholder="Add labels"}}
+    </div>
+    <div class="preparation-input">
+      <h3>Preparation</h3>
+      {{textarea placeholder="How it's made?"}}
+    </div>
+    <div class="comments-input">
+      <h3>Comments</h3>
+      {{textarea placeholder="Add comments"}}
+    </div>
+    <div class="link-input">
+      <h3>Link</h3>
+      {{textarea placeholder="Add an external link to the recipe"}}
+    </div>
+  </div>
+</div>
+{{content-photo}}
+{{search-recipes}}

@@ -7,6 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('landing-page');
+  this.route('login');
+  this.route('signup');
+  this.route('dashboard');
+  this.route('add-recipe');
+  this.route('recipe-view');
 });
 
 export default Router;
