@@ -75,16 +75,21 @@ h2 {
 header {
   width: 100%;
   height: 400px;
-  background-color: $secondary-color;
-  background-image: url(../images/IMG_8591.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: hard-light;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+  #page-header {
+    width: 100%;
+    height: 400px;
+    background-color: $secondary-color;
+    background-image: url(../images/IMG_8591.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: hard-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   .button {
     align-self: flex-end;
