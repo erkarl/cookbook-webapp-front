@@ -187,6 +187,13 @@ footer {
 }
 
 .dashboard-1 {
+  .recipe-articles {
+    display: flex;
+  }
+  .recipe {
+    margin: 20px;
+    margin-left: 0;
+  }
   .button-grey {
     float: right;
   }

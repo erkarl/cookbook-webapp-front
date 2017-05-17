@@ -12,7 +12,8 @@ Router.map(function() {
   this.route('signup');
   this.route('dashboard');
   this.route('add-recipe');
-  this.route('recipe-view');
+  this.route('recipe-view', { path: '/:recipe_id' });
+  this.route('edit-recipe');
 });
 
 export default Router;

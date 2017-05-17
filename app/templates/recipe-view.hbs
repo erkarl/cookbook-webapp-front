@@ -2,40 +2,44 @@
   {{#link-to 'dashboard'}}
   Back to dashboard
   {{/link-to}}
-  <div class= "recipe-header">
-    <h2>Recipe title</h2>
-    {{#link-to 'add-recipe' class="button button-grey"}}
-    Edit
-    {{/link-to}}
-  </div>
-  <div class="recipe-content">
-    <div class="ingredients">
-      <h3>Ingredients</h3>
-      <ul>
-        <li>lala</li>
-        <li>lol</li>
-        <li>yolo</li>
-      </ul>
-    </div>
-    <div class="image">
-      <img width=100 height=100>
-    </div>
-    <div class="labels">
-      <p>label1 label2 label3</p>
-    </div>
-    <div class="preparation">
-      <h3>Preparation</h3>
-      <p>Here's how you make it</p>
-    </div>
-    <div class="comments">
-      <h3>Comments</h3>
-      <p>Some comments maybe</p>
-    </div>
-    <div class="link">
-      <h3>Link</h3>
-      <a>www.muna.ee</a>
-    </div>
-  </div>
+
+    <article class="recipe">
+
+      <div class= "recipe-header">
+        <h2>{{model.title}}</h2>
+        {{#link-to 'edit-recipe' class="button button-grey"}}
+        Edit
+        {{/link-to}}
+      </div>
+
+      <div class="recipe-content">
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>{{model.ingredients}}</ul>
+        </div>
+        <div class="image">
+          <img src="{{model.image}}" width=100 height=100>
+        </div>
+        <div class="labels">
+          <p>{{model.labels}}</p>
+        </div>
+        <div class="preparation">
+          <h3>Preparation</h3>
+          <p>{{model.preparation}}</p>
+        </div>
+        <div class="comments">
+          <h3>Comments</h3>
+          <p>{{model.comments}}</p>
+        </div>
+        <div class="link">
+          <h3>Link</h3>
+          <a>{{model.link}}</a>
+        </div>
+      </div>
+
+    </article>
+
+
 </div>
 {{content-photo}}
 {{search-recipes}}
