@@ -5,21 +5,17 @@ moduleForComponent('page-header', 'Integration | Component | page header', {
   integration: true
 });
 
-test('it renders', function(assert) {
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
+test('it renders page header', function(assert) {
   this.render(hbs`{{page-header}}`);
+  assert.equal(this.$('#page-header').length, 1);
+});
 
-  assert.equal(this.$().text().trim(), '');
+test('it has login button when not logged in', function(assert) {
+  this.render(hbs`{{page-header}}`);
+  assert.equal(this.$('.button').length, 1);
+});
 
-  // Template block usage:
-  this.render(hbs`
-    {{#page-header}}
-      template block text
-    {{/page-header}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+test('it has page title', function(assert) {
+  this.render(hbs`{{page-header}}`);
+  assert.equal(this.$('#brand').length, 1);
 });

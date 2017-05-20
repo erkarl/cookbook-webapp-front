@@ -5,21 +5,9 @@ moduleForComponent('content-photo', 'Integration | Component | content photo', {
   integration: true
 });
 
-test('it renders', function(assert) {
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('it renders content photo', function(assert) {
 
   this.render(hbs`{{content-photo}}`);
+  assert.equal(this.$('.content-photo').length, 1);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#content-photo}}
-      template block text
-    {{/content-photo}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
 });
