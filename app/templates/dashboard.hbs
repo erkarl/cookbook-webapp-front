@@ -1,9 +1,7 @@
 <div class= "dashboard-1 body-content">
   {{#link-to 'add-recipe' class="button button-grey"}}Add recipe{{/link-to}}
   <h2>Recently Added</h2>
-  {{#each model as |recipeUnit|}}
-    {{recipe-list recipe = recipeUnit}}
-  {{/each}}
+  {{recipe-list recipes=model}}
 </div>
 {{content-photo}}
 <div class= "dashboard-2 body-content">
@@ -12,10 +10,5 @@
     {{#link-to 'add-recipe' class="button button-grey"}}Add a new recipe{{/link-to}}
   </div>
 </div>
-
-
-
-
-
-
-<!--{{search-recipes}}-->
+{{search-recipes searchChanged=(action 'filterBySearch')}}
+{{recipe-list recipes=filteredRecipes}}
