@@ -5,21 +5,30 @@ moduleForComponent('recipe-item', 'Integration | Component | recipe item', {
   integration: true
 });
 
-test('it renders', function(assert) {
+test('it renders recipe photo', function(assert) {
+  const recipe = {
+    image: "muna.jpg"
+  };
+  this.set('recipe', recipe);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  this.render(hbs`{{recipe-item recipe=recipe}}`);
+  assert.equal(this.$('img').attr('src'), recipe.image);
+});
 
-  this.render(hbs`{{recipe-item}}`);
+test('it renders recipe title', function(assert) {
+  var recipe = {
+    title: "muna"
+  };
+  this.set('recipe', recipe);
+  this.render(hbs`{{recipe-item recipe=recipe}}`);
+  assert.equal(this.$('h3').first().text().trim(), recipe.title);
+});
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#recipe-item}}
-      template block text
-    {{/recipe-item}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+test('it renders recipe labels', function(assert) {
+  var recipe = {
+    labels: "food, edible"
+  };
+  this.set('recipe', recipe);
+  this.render(hbs`{{recipe-item recipe=recipe}}`);
+  assert.equal(this.$('p').first().text().trim(), recipe.labels);
 });

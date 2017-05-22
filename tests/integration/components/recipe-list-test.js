@@ -5,21 +5,26 @@ moduleForComponent('recipe-list', 'Integration | Component | recipe list', {
   integration: true
 });
 
-test('it renders', function(assert) {
+test('it renders recipe item thumbnails', function(assert) {
+  const recipes = [
+    {type: "recipe",
+      attributes: {
+        title: "pancakes",
+        image: "img.jpg",
+        labels: "tasty, dessert"
+      }
+    },
+    {type: "recipe",
+      attributes: {
+        title: "pancakes",
+        image: "img.jpg",
+        labels: "tasty, dessert"
+      }
+    }
+  ];
+  this.set('recipes', recipes);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  this.render(hbs`{{recipe-list recipes=recipes}}`);
+  assert.equal(this.$('.recipe-article').length, 2);
 
-  this.render(hbs`{{recipe-list}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#recipe-list}}
-      template block text
-    {{/recipe-list}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
 });
