@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
     };
 
     if (searchQuery) {
-      return recipes.filter(bySearchQuery)
+      return recipes.filter(bySearchQuery);
     }
   }),
 });
